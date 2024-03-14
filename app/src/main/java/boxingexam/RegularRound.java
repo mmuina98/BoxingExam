@@ -3,41 +3,34 @@ package boxingexam;
 public class RegularRound  implements Round{
 
     String roundScore ="";
-    int blueBoxScore = 0;
-    int redBoxScore = 0;
+    byte blueBoxScore = 0;
+    byte redBoxScore = 0;
 
     RegularRound(String roundScore){
         this.roundScore = roundScore;
     }
 
     @Override
-    public byte redBoxerScore() {
-        return 0;
+    public byte getRedBoxerScore() {
+        return this.redBoxScore;
     }
 
     @Override
-    public byte blueBoxerScore() {
-        return 0;
+    public byte getBlueBoxerScore() {
+        return blueBoxScore;
     }
 
     @Override
     public void boxerRoundScore() {
-        if (roundScore.charAt(0) == '1'){
+        if (roundScore.charAt(0) == '1') {
             this.blueBoxScore = 9;
             this.redBoxScore = 10;
-        }else{
+        } else {
 
             this.blueBoxScore = 10;
             this.redBoxScore = 9;
         }
-    }
 
-    public int getRedBoxerScore() {
-        return this.redBoxScore;
-    }
-
-    public int getBlueBoxerScore() {
-        return this.blueBoxScore;
     }
 
 }

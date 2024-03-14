@@ -46,6 +46,5 @@ public class ScoreCard {
                 "Round"+ '\t'+ "Score"+'\t'+ "Round"+'\t'+ "Score"+'\t'+ "Round"+'\n' +
                 "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n'
                 ;
-
     }
 }

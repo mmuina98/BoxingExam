@@ -1,20 +1,20 @@
 package boxingexam;
 
-public class PointsDeducted implements Round{
+public class PointsDeducted implements Round {
 
     String roundScore = "";
 
-    PointsDeducted(String roundScore){
+    PointsDeducted(String roundScore) {
         this.roundScore = roundScore;
     }
 
     @Override
-    public byte redBoxerScore() {
+    public byte getRedBoxerScore() {
         return 0;
     }
 
     @Override
-    public byte blueBoxerScore() {
+    public byte getBlueBoxerScore() {
         return 0;
     }
 
@@ -22,12 +22,5 @@ public class PointsDeducted implements Round{
     public void boxerRoundScore() {
 
     }
-
-    public String getRedBoxerScore() {
-        return "";
-    }
-
-    public String getBlueBoxerScore() {
-        return "";
-    }
 }
+

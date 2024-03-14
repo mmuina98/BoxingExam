@@ -2,9 +2,9 @@ package boxingexam;
 
 public interface Round {
 
-    byte redBoxerScore();
+    byte getRedBoxerScore();
 
-    byte blueBoxerScore();
+    byte getBlueBoxerScore();
 
     void boxerRoundScore();
 
