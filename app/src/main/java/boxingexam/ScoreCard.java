@@ -7,7 +7,9 @@ public class ScoreCard {
     String color ="";
     String redCorner ="";
     String blueCorner ="";
-    ArrayList<Round> rounds;
+    String[] judgeScoreCard;
+    Round[] rounds;
+
 
     ScoreCard(String color){
         this.color = color;
@@ -21,7 +23,8 @@ public class ScoreCard {
         this.blueCorner = boxerName;
     }
 
-    public void loadJudgeScoreCard() {
+    public void loadJudgeScoreCard(String[] scoreCard) {
+        this.judgeScoreCard = scoreCard;
     }
 
     public String getRedBoxerFinalScore() {
@@ -32,6 +35,8 @@ public class ScoreCard {
         return "";
     }
 
+
+
     @Override
     public String toString() {
         return
@@ -39,6 +44,8 @@ public class ScoreCard {
                 " "+'\t'+ blueCorner + '\t' + redCorner + '\n' +
                 " "+'\t'+ '\t' + /*rounds.size()*/0 + " " + "rounds" +'\n' +
                 "Round"+ '\t'+ "Score"+'\t'+ "Round"+'\t'+ "Score"+'\t'+ "Round"+'\n' +
-                "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n';
+                "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n'
+                ;
+
     }
 }

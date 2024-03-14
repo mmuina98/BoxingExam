@@ -22,4 +22,12 @@ public class PointsDeducted implements Round{
     public void boxerRoundScore() {
 
     }
+
+    public String getRedBoxerScore() {
+        return "";
+    }
+
+    public String getBlueBoxerScore() {
+        return "";
+    }
 }

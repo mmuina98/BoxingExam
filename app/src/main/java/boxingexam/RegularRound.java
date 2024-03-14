@@ -39,4 +39,5 @@ public class RegularRound  implements Round{
     public int getBlueBoxerScore() {
         return this.blueBoxScore;
     }
+
 }
