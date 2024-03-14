@@ -1,10 +1,44 @@
 package boxingexam;
 
+import java.util.ArrayList;
+
 public class ScoreCard {
 
-    public void setRCorner(String rockyBalboa) {
+    String color ="";
+    String redCorner ="";
+    String blueCorner ="";
+    ArrayList<Round> rounds;
+
+    ScoreCard(String color){
+        this.color = color;
     }
 
-    public void setBCorner(String apolloCreed) {
+    public void setRCorner(String boxerName) {
+        this.redCorner = boxerName;
+    }
+
+    public void setBCorner(String boxerName) {
+        this.blueCorner = boxerName;
+    }
+
+    public void loadJudgeScoreCard() {
+    }
+
+    public String getRedBoxerFinalScore() {
+        return "";
+    }
+
+    public String getBlueBoxerFinalScore() {
+        return "";
+    }
+
+    @Override
+    public String toString() {
+        return
+                " "+'\t'+ '\t'+ color + '\n' +
+                " "+'\t'+ blueCorner + '\t' + redCorner + '\n' +
+                " "+'\t'+ '\t' + /*rounds.size()*/0 + " " + "rounds" +'\n' +
+                "Round"+ '\t'+ "Score"+'\t'+ "Round"+'\t'+ "Score"+'\t'+ "Round"+'\n' +
+                "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n';
     }
 }
