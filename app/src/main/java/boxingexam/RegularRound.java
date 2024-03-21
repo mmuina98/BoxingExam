@@ -2,12 +2,15 @@ package boxingexam;
 
 public class RegularRound  implements Round{
 
-    String roundScore ="";
-    byte blueBoxScore = 0;
-    byte redBoxScore = 0;
+    private String roundScore ="";
+    private byte blueBoxScore = 0;
+    private byte redBoxScore = 0;
+    private byte blueTotalScore = 0;
+    private byte redTotalScore = 0;
 
     RegularRound(String roundScore){
         this.roundScore = roundScore;
+        this.boxerRoundScore();
     }
 
     @Override
@@ -30,7 +33,19 @@ public class RegularRound  implements Round{
             this.blueBoxScore = 10;
             this.redBoxScore = 9;
         }
-
     }
 
+    @Override
+    public String toString() {
+        return Byte.toString(redBoxScore) +
+        "     " + '\t' +
+
+        "     " + '\t' +
+
+        "     " + '\t' +
+
+        "     " + '\t' +
+        Byte.toString(blueBoxScore) +
+        "     " + '\n' ;
+    }
 }

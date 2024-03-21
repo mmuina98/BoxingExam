@@ -1,14 +1,15 @@
 package boxingexam;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ScoreCard {
 
     String color ="";
     String redCorner ="";
     String blueCorner ="";
-    String[] judgeScoreCard;
-    Round[] rounds;
+    String[] judgeScoreCard = {};
+    Round[] rounds = {};
 
 
     ScoreCard(String color){
@@ -25,6 +26,12 @@ public class ScoreCard {
 
     public void loadJudgeScoreCard(String[] scoreCard) {
         this.judgeScoreCard = scoreCard;
+        this.rounds = new Round[scoreCard.length];
+        int i = 0;
+        for( String score : scoreCard){
+            this.rounds[i] = RoundFactory.getRound(score);
+            i++;
+        }
     }
 
     public String getRedBoxerFinalScore() {
@@ -35,6 +42,21 @@ public class ScoreCard {
         return "";
     }
 
+    private String addAllRoundsToString(){
+        StringBuilder roundsToString = new StringBuilder();
+        for(Round round : rounds){
+            roundsToString.append(Byte.toString(round.getRedBoxerScore())).
+                    append("     ").append('\t').
+
+                    append("     ").append('\t').
+                    append("     ").append('\t').
+                    append("     ").append('\t').
+                    append(Byte.toString(round.getBlueBoxerScore())).
+                    append("     ").append('\n');
+        }
+        return roundsToString.toString();
+    }
+
 
 
     @Override
@@ -42,9 +64,9 @@ public class ScoreCard {
         return
                 " "+'\t'+ '\t'+ color + '\n' +
                 " "+'\t'+ blueCorner + '\t' + redCorner + '\n' +
-                " "+'\t'+ '\t' + /*rounds.size()*/0 + " " + "rounds" +'\n' +
+                " "+'\t'+ '\t' + 0 + " " + "rounds" +'\n' +
                 "Round"+ '\t'+ "Score"+'\t'+ "Round"+'\t'+ "Score"+'\t'+ "Round"+'\n' +
-                "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n'
-                ;
+                "Score"+ '\t'+ "Total"+'\t'+ "     "+'\t'+ "Total"+'\t'+ "Score"+'\n'+
+                this.addAllRoundsToString();
     }
 }

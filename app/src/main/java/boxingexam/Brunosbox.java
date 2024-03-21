@@ -3,6 +3,8 @@
  */
 package boxingexam;
 
+import java.util.Arrays;
+
 public class Brunosbox
 {
     public static void main( String[] args ) {
@@ -78,7 +80,6 @@ public class Brunosbox
 
         System.out.println(whiteScoreCard);
 
-
         /**
          * Crea una clase llamada RegularRound
          * que implemente la interfaz Round.
@@ -118,7 +119,9 @@ public class Brunosbox
         // Escribe aquí el código para acceder al primer
         // elemento del array String[][] data de la línea 13,
         // la tarjeta blanca
+
         System.out.println(whiteScoreCard);
+        //System.out.println(Arrays.toString(whiteScoreCard.rounds));
 /*
 
         */
